@@ -1,0 +1,154 @@
+/*
+  styles.css
+  Basic CSS for Student Portfolio
+  Demonstrates float layout (header/sidebar), Flexbox for cards, and form styles.
+*/
+/* Reset / base */
+* { box-sizing: border-box; }
+/* Import stylish fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+body { font-family: 'Merriweather', Georgia, serif; line-height:1.6; margin:0; padding:0; color:#111; }
+
+/* Header / Nav - using float for logo and nav */
+.site-header { background:#0f172a; color:#fff; padding:12px 20px; }
+.site-header .logo { float:left; font-weight:700; font-size:1.2rem; }
+.site-header .main-nav { float:right; }
+.site-header .main-nav ul { list-style:none; margin:0; padding:0; }
+.site-header .main-nav li { display:inline-block; margin-left:16px; }
+.site-header .main-nav a { color:#fff; text-decoration:none; }
+.clearfix { clear:both; }
+
+/* Hero */
+.hero { background:#e0f2fe; padding:30px 20px; text-align:center; }
+
+/* Content layout: article + floated sidebar */
+.content { padding:20px; max-width:1000px; margin:0 auto; }
+.main-article { width:65%; float:left; }
+.sidebar { width:30%; float:right; background:#fafafa; padding:12px; border-radius:6px; }
+.sidebar ul { padding-left:16px; }
+
+/* Footer */
+.site-footer { text-align:center; padding:12px; background:#f1f5f9; margin-top:20px; }
+
+/* Cards container (used on Skills/Projects page) */
+.cards-container { display:flex; gap:16px; flex-wrap:wrap; padding:20px; max-width:1000px; margin:0 auto; }
+.card { flex:1 1 280px; padding:16px; border:2px solid #ccc; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
+.card h2 { margin-top:0; }
+
+/* Colorful text rules */
+:root {
+  --c-red: #ef4444;
+  --c-orange: #f97316;
+  --c-yellow: #f59e0b;
+  --c-teal: #06b6d4;
+  --c-blue: #60a5fa;
+  --c-green: #34d399;
+}
+
+/* Additional font imports for page variety */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Montserrat:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+/* Per-page font + color palettes */
+.page-home { font-family: 'Rubik', 'Merriweather', sans-serif; --page-accent: var(--c-blue); }
+.page-home .site-header .logo { font-family: 'Rubik', sans-serif; }
+.page-home a { color:var(--c-blue); }
+
+.page-about { font-family: 'Merriweather', Georgia, serif; --page-accent: var(--c-orange); }
+.page-about .site-header .logo { font-family: 'Poppins', sans-serif; }
+.page-about a { color:var(--c-orange); }
+
+.page-skills { font-family: 'Montserrat', Arial, sans-serif; --page-accent: var(--c-green); }
+.page-skills .site-header .logo { font-family: 'Montserrat', sans-serif; }
+.page-skills a { color:var(--c-green); }
+
+.page-contact { font-family: 'Lora', 'Merriweather', serif; --page-accent: var(--c-teal); }
+.page-contact .site-header .logo { font-family: 'Lora', serif; }
+.page-contact a { color:var(--c-teal); }
+
+/* Per-page text color overrides to make pages feel distinct */
+.page-home p { color:#0b3d91; }
+.page-home .hero h1 { font-weight:700; font-size:2.2rem; }
+
+.page-about p { color:#6b2f00; }
+.page-about .interests h2 { color:#b45309; }
+
+.page-skills p { color:#0f4d24; }
+.page-skills .card h2 { color:#166534; }
+
+.page-contact p { color:#064e3b; }
+.page-contact .contact-main h1 { color:#115e59; }
+
+/* Gradient headings for a colorful look */
+.hero h1, .main-article h2, .cards-container .card h2, .about-main h1, .contact-main h1 {
+  background: linear-gradient(90deg, var(--c-blue), var(--c-teal), var(--c-green), var(--c-yellow), var(--c-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Use Poppins for headings to make text stylish */
+.hero h1, .main-article h2, .cards-container .card h2, .about-main h1, .contact-main h1,
+.site-header .logo { font-family: 'Poppins', Arial, sans-serif; letter-spacing:0.4px; }
+
+/* Slightly increase paragraph readability */
+.main-article p, .about-main p, .cards-container .card p, .contact-form p { font-size:1rem; color:#1f2937; }
+
+/* Colorful nav links using nth-child for variety */
+.site-header .main-nav li:nth-child(1) a { color:var(--c-red); }
+.site-header .main-nav li:nth-child(2) a { color:var(--c-orange); }
+.site-header .main-nav li:nth-child(3) a { color:var(--c-blue); }
+.site-header .main-nav li:nth-child(4) a { color:var(--c-teal); }
+.site-header .main-nav a:hover { text-decoration:underline; opacity:0.9; }
+
+/* Subtle colorful accents for paragraphs and lists */
+.main-article p { color:#0f172a; }
+.sidebar h3 { color:var(--c-blue); }
+.cards-container .card p { color:#334155; }
+
+/* Optional colorful badges for quick links */
+.sidebar ul li a { display:inline-block; padding:4px 8px; border-radius:6px; }
+.sidebar ul li a:hover { transform:translateX(4px); }
+
+/* More colorful text enhancements */
+/* Link colors across the site */
+a { color:var(--c-orange); text-decoration:none; }
+a:hover { color:var(--c-red); text-decoration:underline; }
+
+/* Interests list: colorful bullet dots and subtle backgrounds */
+.interests ul { list-style:none; padding:0; margin:8px 0 16px 0; }
+.interests ul li { position:relative; padding:10px 12px 10px 32px; border-radius:8px; margin-bottom:8px; background:linear-gradient(90deg, rgba(96,165,250,0.03), rgba(6,182,212,0.02)); }
+.interests ul li::before { content:""; position:absolute; left:12px; top:50%; transform:translateY(-50%); width:12px; height:12px; border-radius:50%; }
+.interests ul li:nth-child(1)::before { background:var(--c-blue); }
+.interests ul li:nth-child(2)::before { background:var(--c-orange); }
+.interests ul li:nth-child(3)::before { background:var(--c-green); }
+.interests ul li:nth-child(4)::before { background:var(--c-teal); }
+
+/* Heading accents */
+.main-article h2 { color:var(--c-blue); }
+.interests h2 { margin-top:12px; color:var(--c-orange); }
+
+/* Footer color */
+.site-footer p { color:var(--c-teal); font-weight:600; }
+
+/* About page image */
+.about-image img { max-width:100%; height:auto; display:block; border-radius:6px; }
+.about-image { margin-top:16px; }
+
+/* Contact form styling */
+.contact-main, .join-main { max-width:700px; margin:24px auto; padding:0 12px; }
+.contact-form, .join-form { display:flex; flex-direction:column; gap:10px; }
+.contact-form label, .join-form label { font-weight:600; }
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form input[type="tel"], .contact-form select, .contact-form textarea,
+.join-form input[type="text"], .join-form input[type="email"], .join-form select { padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
+.contact-form textarea { resize:vertical; }
+.btn-submit { background:#0ea5a4; color:#fff; padding:10px 14px; border:none; border-radius:6px; cursor:pointer; }
+.btn-submit:hover { background:#089192; }
+
+/* Responsive adjustments */
+@media (max-width:800px) {
+  .main-article, .sidebar { float:none; width:100%; }
+  .site-header .main-nav { float:none; margin-top:8px; }
+  .site-header .main-nav li { display:inline-block; margin-left:8px; }
+  .cards-container { flex-direction:column; }
+}

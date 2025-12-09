@@ -1,0 +1,64 @@
+<!--
+  about.html
+  About Me page for Student Portfolio
+  Contains a brief personal introduction (4-5 lines) and a profile image.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me - Student Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-about">
+  <header class="site-header">
+    <div class="logo">Rudra</div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="clearfix"></div>
+  </header>
+
+  <main class="about-main">
+    <section>
+      <h1>About Me</h1>
+      <p>I am a dedicated student passionate about building web experiences and
+      learning data-driven problem solving. I enjoy designing user-friendly
+      interfaces and experimenting with layouts and responsive design.
+      In college I participate in coding clubs and collaborate on small projects.
+      I am keen to learn more about front-end development and UI/UX principles.</p>
+
+      <!-- Expanded information about interests and activities -->
+      <section class="interests">
+        <h2>Interests & Activities</h2>
+        <p>I enjoy:</p>
+        <ul>
+          <li><strong>Coding:</strong> Building small web apps, practicing algorithms, and learning new frameworks when possible.</li>
+          <li><strong>Exploring new places:</strong> Visiting local events, campus spots and tech meetups to learn from others.</li>
+          <li><strong>Being helpful:</strong> Assisting classmates with projects, pair programming, and sharing resources.</li>
+          <li><strong>Leadership:</strong> Taking part in club organization, leading small teams for hackathons and workshops.</li>
+        </ul>
+        <p>Outside of classes I enjoy volunteering at college events, mentoring juniors, and organizing study groups and coding sessions that help others learn.</p>
+      </section>
+
+      <!-- Local profile image: save your photo as `images/rudra.jpg` -->
+      <figure class="about-image">
+        <!-- Use a relative path so the image loads when deployed: images/rudrapic.jpeg -->
+        <img src="rudrapic.jpeg" alt="Profile photo of Rudra">
+        
+        <figcaption>Rudra — Profile photo</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Rudra</p>
+  </footer>
+</body>
+</html>
