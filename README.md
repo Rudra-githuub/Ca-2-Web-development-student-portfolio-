@@ -1,2 +1,29 @@
-# Ca-2-Web-development-student-portfolio-
-This project is a simple and clean student portfolio website built using HTML and CSS. It includes a responsive layout, navigation bar, hero section, sidebar, cards, and contact form. The design is lightweight, beginner-friendly, and easy to customize for personal use or academic projects.
+# 🌐 Personal Portfolio Website
+
+This repository contains the source code of my personal portfolio website, built using **HTML** and **CSS**.  
+The portfolio showcases my skills, projects, academic details, and ways to contact me. It is simple, responsive, and designed to give a clean user experience.
+
+---
+
+## 🚀 Features
+
+- ✨ Clean and modern UI  
+- 📌 Separate pages for Home, About, Skills, and Contact  
+- 🎨 Attractive color palette and typography  
+- 📱 Responsive layout (mobile-friendly)  
+- 🧩 Reusable components (cards, sidebar, hero section)  
+- 📝 Simple code structure for easy customization  
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5**  
+- **CSS3**  
+- Google Fonts  
+- Flexbox + Float-based layout  
+
+---
+
+## 📂 Project Structure
+
